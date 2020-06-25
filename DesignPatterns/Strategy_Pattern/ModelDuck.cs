@@ -2,21 +2,20 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace Strategy_Duck
+namespace Strategy_Pattern
 {
-   public class RubberDuck : Duck
+   public class ModelDuck : Duck
     {
-
-        public RubberDuck()
+        public ModelDuck()
         {
-            quackBehavior = new Squeak();
             flyBehavior = new FlyNoWay();
-
+            quackBehavior = new Quack();
         }
 
         public override object Display()
         {
-            return "I'm a rubber duck";
+            return "I'm a model duck";
         }
+
     }
 }

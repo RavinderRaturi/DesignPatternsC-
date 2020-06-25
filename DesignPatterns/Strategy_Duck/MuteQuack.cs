@@ -4,7 +4,11 @@ using System.Text;
 
 namespace Strategy_Duck
 {
-    class MuteQuack
+ public class MuteQuack : IQuackBehavior
     {
+        public string Quacking()
+        {
+            return "<<silence>>";
+        }
     }
 }

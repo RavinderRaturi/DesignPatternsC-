@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Strategy_Duck
+namespace Strategy_Pattern
 {
     public  class FlyNoWay : IFlyBehavior
     {

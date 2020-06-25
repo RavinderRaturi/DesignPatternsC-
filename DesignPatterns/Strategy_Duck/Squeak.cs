@@ -4,7 +4,12 @@ using System.Text;
 
 namespace Strategy_Duck
 {
-    class Squeak
+   public class Squeak : IQuackBehavior
     {
+        public string Quacking()
+        {
+            return "Squeak";
+        }
+
     }
 }

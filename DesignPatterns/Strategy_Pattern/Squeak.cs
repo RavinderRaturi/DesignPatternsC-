@@ -2,13 +2,14 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace Strategy_Duck
+namespace Strategy_Pattern
 {
-    public class Quack : IQuackBehavior
+   public class Squeak : IQuackBehavior
     {
         public string Quacking()
         {
-            return "Quack";
+            return "Squeak";
         }
+
     }
 }

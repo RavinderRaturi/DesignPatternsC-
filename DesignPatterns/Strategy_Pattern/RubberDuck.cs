@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace Strategy_Duck
+namespace Strategy_Pattern
 {
    public class RubberDuck : Duck
     {

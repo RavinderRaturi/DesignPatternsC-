@@ -1,4 +1,4 @@
-﻿namespace Strategy_Duck
+﻿namespace Strategy_Pattern
 {
     public interface IQuackBehavior
     {
