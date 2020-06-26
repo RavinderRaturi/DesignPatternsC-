@@ -49,6 +49,8 @@
     <Reference Include="System.Core" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ObserverCurrentConditionDisplayFixture.cs" />
+    <Compile Include="ObserverWeatherDataDisplayFixture.cs" />
     <Compile Include="StrategyDuckFixture.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -56,6 +58,10 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Observer_Pattern\Observer_Pattern.csproj">
+      <Project>{aac1e6fb-a280-4415-9bd5-a92d702c9426}</Project>
+      <Name>Observer_Pattern</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Strategy_Pattern\Strategy_Pattern.csproj">
       <Project>{fecb4356-341b-450f-bd24-55637910ebe3}</Project>
       <Name>Strategy_Pattern</Name>
