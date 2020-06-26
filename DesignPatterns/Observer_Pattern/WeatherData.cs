@@ -7,37 +7,37 @@ using System.Threading.Tasks;
 
 namespace Observer_Pattern
 {
-    public class WeatherData : ISubject
+    public class WeatherData : ISubjectAKAObservable
     {
-        private ArrayList observer;
+        private ArrayList observers;
         private float temprature;
         private float humidity;
         private float pressure;
 
         public WeatherData()
         {
-            observer = new ArrayList();
+            observers = new ArrayList();
         }
 
         public void NofifyObserver()
         {
-            foreach (IObserver observer in observer)
+            foreach (IObserverAKASubscriber  observer in observers)
             {
                 observer.Update(temprature, humidity, pressure);
             }
         }
 
-        public void RegisterObserver(IObserver o)
+        public void RegisterObserver(IObserverAKASubscriber o)
         {
-            observer.Add(o);
+            observers.Add(o);
         }
 
-        public void RemoveObserver(IObserver o)
+        public void RemoveObserver(IObserverAKASubscriber o)
         {
-            int i = observer.IndexOf(o);
+            int i = observers.IndexOf(o);
             if (i >= 0)
             {
-                observer.Remove(o);
+                observers.Remove(o);
             }
         }
 

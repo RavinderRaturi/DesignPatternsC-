@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Observer_Pattern
 {
-    public interface IObserver
+    public interface IObserverAKASubscriber
     {
         void Update(float temprature, float humidity, float pressure);
     }

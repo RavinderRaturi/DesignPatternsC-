@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Observer_Pattern
 {
-    public class StatisticsDisplay : IObserver, IDisplayElement
+    public class StatisticsDisplay : IObserverAKASubscriber, IDisplayElement
     {
         #region Members
         private float maxTemp = 0.0f;
@@ -14,7 +14,7 @@ namespace Observer_Pattern
                                     //is set first invokation
         private float temperatureSum = 0.0f;
         private int numReadings = 0;
-        private ISubject weatherData;
+        private ISubjectAKAObservable weatherData;
         #endregion//Members
 
         #region NumberOfReadings Property
@@ -28,7 +28,7 @@ namespace Observer_Pattern
         #endregion//NumberOfReadings Property
 
         #region Constructor
-        public StatisticsDisplay(ISubject weatherData)
+        public StatisticsDisplay(ISubjectAKAObservable weatherData)
         {
             this.weatherData = weatherData;
             weatherData.RegisterObserver(this);

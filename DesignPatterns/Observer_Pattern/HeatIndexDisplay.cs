@@ -6,12 +6,12 @@ using System.Threading.Tasks;
 
 namespace Observer_Pattern
 {
- public   class HeatIndexDisplay : IObserver, IDisplayElement
+ public   class HeatIndexDisplay : IObserverAKASubscriber, IDisplayElement
     {
         private float heatIndex = 0.0f;
-        private ISubject weatherData;
+        private ISubjectAKAObservable weatherData;
 
-        public HeatIndexDisplay(ISubject weatherData)
+        public HeatIndexDisplay(ISubjectAKAObservable weatherData)
         {
             this.weatherData = weatherData;
             weatherData.RegisterObserver(this);
@@ -28,8 +28,7 @@ namespace Observer_Pattern
             heatIndex = computeHeatIndex(temprature, relativeHumidity);
         }
 
-        private float computeHeatIndex(float temperature,
-    float relativeHumidity)
+        private float computeHeatIndex(float temperature, float relativeHumidity)
         {
             float heatIndex = (float)((16.923 + (0.185212 * temperature) +
                 (5.37941 * relativeHumidity) - (0.100254 * temperature * relativeHumidity) +

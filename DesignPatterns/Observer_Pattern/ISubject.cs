@@ -6,10 +6,10 @@ using System.Threading.Tasks;
 
 namespace Observer_Pattern
 {
-    public interface ISubject
+    public interface ISubjectAKAObservable
     {
-        void RegisterObserver(IObserver o);
-        void RemoveObserver(IObserver o);
+        void RegisterObserver(IObserverAKASubscriber o);
+        void RemoveObserver(IObserverAKASubscriber o);
         void NofifyObserver();
     }
 }

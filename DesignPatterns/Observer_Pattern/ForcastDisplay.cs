@@ -6,13 +6,13 @@ using System.Threading.Tasks;
 
 namespace Observer_Pattern
 {
-    public class ForcastDisplay : IObserver, IDisplayElement
+    public class ForcastDisplay : IObserverAKASubscriber, IDisplayElement
     {
         private float currentPressure = 29.92f;
         private float lastPressure;
-        private ISubject weatherData;
+        private ISubjectAKAObservable weatherData;
 
-        public ForcastDisplay(ISubject weatherData) {
+        public ForcastDisplay(ISubjectAKAObservable weatherData) {
             this.weatherData = weatherData;
             weatherData.RegisterObserver(this);
         }
