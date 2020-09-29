@@ -10,6 +10,7 @@ namespace Observer_Pattern
     {
 
         private float temperature;
+//teseting
         private float humidity;
         private float pressure;
         private ISubjectAKAObservable weatherData;
